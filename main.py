@@ -36,7 +36,65 @@
 print(6 >= 4)
 print(8 != 8)
 
-age = 19
+# while - условный цикл
+
+# проверка на правильность пароля
+right = '123'
+ans = input('password: ')
+while ans != right:
+    print('error')
+    ans = input('password: ')
+# while True - бесконечный цикл
+# break - остановить бесконечный цикл
+
+# счёт количества людей старше 18 и моложе 100 лет
+count = 0
+while True:
+    print('hello')
+    age = int(input('age: '))
+    if age > 18:
+        count = count + 1  # count += 1
+    if count > 0:
+        break
+
+# находим сколько цифр в числе
+n = 77777
+i = 0
+while n > 0:
+    last = n % 10  # 123 / 10 = 12.3
+    i = i + 1  # i += 1
+    n = n // 10  # n //= 10
+print(i, 'цифр в числе')
+
+# проверка на возраст для прав, если 18, то езжайте, если меньше, то получите права
+age = 17
 if age >= 18:
     print('можете ехать')
     print('удачного пути')
+else:
+    print('сначала получите права')
+
+# проверка на цвет, если есть, то принт цвет, если нет, то ничего не принт (иначе если)
+color = 'red'
+if color == 'red':
+    print('красный')
+elif color == 'green':  # else if - иначе если
+    print('зеленый')
+elif color == 'blue':
+    print('синий')
+else:
+    print('такого слова нет')
+
+# проверка возраста > 18 < 100, и age переводим в int
+age = input('age: ')
+age = int(age)
+print(age)
+if age >= 18 and age < 100:
+    print('lets go')
+
+# функция f'{переменная}' вставляем переменные в текс для удобства
+age = 8
+name = 'nick'
+city = 'spb'
+print('my age is', age, 'my name is', name, 'i live in', city)
+print(f'my age is {age}. My name is {name}. I live in {city}')
